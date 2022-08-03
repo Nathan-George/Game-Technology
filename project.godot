@@ -23,6 +23,16 @@ _global_script_class_icons={
 config/name="Technology"
 config/icon="res://icon.png"
 
+[autoload]
+
+UserData="*res://addons/github-integration/scripts/user_data.gd"
+IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
+RestHandler="*res://addons/github-integration/scripts/RestHandler.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/github-integration/plugin.cfg" )
+
 [gdnative]
 
 singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
