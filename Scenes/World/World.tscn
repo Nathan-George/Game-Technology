@@ -2,6 +2,7 @@
 
 [ext_resource path="res://Assets/GrassTiles.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/World/WorldGen.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/World/WorldCam.tscn" type="PackedScene" id=2]
 
 [sub_resource type="TileSet" id=1]
 0/name = "GrassTiles.png 0"
@@ -62,6 +63,8 @@
 3/z_index = 0
 
 [node name="World" type="Node2D"]
+
+[node name="Camera2D" parent="." instance=ExtResource( 2 )]
 
 [node name="TileMap" type="TileMap" parent="."]
 mode = 1
