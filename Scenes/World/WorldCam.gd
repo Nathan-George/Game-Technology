@@ -18,7 +18,7 @@ func _process(delta):
 		
 func _input(event : InputEvent):
 	if event.is_class("InputEventMouseMotion"):
-		if Input.is_mouse_button_pressed(BUTTON_LEFT):
+		if Input.is_mouse_button_pressed(BUTTON_LEFT) or Input.is_mouse_button_pressed(BUTTON_MIDDLE):
 			position-=event.relative*current_zoom
 			
 	if event.is_class("InputEventMouseButton"):
