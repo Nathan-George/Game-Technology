@@ -10,9 +10,10 @@ func _ready():
 	
 	noise_generator = OpenSimplexNoise.new()
 	noise_generator.seed = randi()
-	noise_generator.period = 10
+	noise_generator.octaves = 3
+	noise_generator.period = 20
 	
-	var water_levels = [-0.3, 0.3, 1]
+	var water_levels = [-0.25, -0.1, 1]
 	
 	# generate map
 	for x in range(map_size):
@@ -20,7 +21,7 @@ func _ready():
 			var value = noise_generator.get_noise_2d(x, y)
 			for i in range(water_levels.size()):
 				if value < water_levels[i]:
-					set_cell(x, y, i + 1)
+					set_cell(x, y, 3 - i)
 					break
 
 
