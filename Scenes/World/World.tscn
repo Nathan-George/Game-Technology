@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/WorldTileSets/Grass/GrassTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/World/WorldCam.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/World/WorldGen.gd" type="Script" id=3]
+[ext_resource path="res://Assets/WorldTileSets/Water/WaterTileset.tres" type="TileSet" id=4]
+[ext_resource path="res://Scenes/WorldGUI/WorldGUI.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node2D"]
 
 [node name="Camera2D" parent="." instance=ExtResource( 2 )]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Tiles" type="Node2D" parent="."]
+
+[node name="GroundTileMap" type="TileMap" parent="Tiles"]
 mode = 1
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 16 )
@@ -16,3 +20,17 @@ cell_y_sort = true
 centered_textures = true
 format = 1
 script = ExtResource( 3 )
+
+[node name="WaterTileMap" type="TileMap" parent="Tiles"]
+mode = 1
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 32, 16 )
+cell_y_sort = true
+centered_textures = true
+format = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource( 5 )]
+
+[node name="Node2D" type="Node2D" parent="."]
