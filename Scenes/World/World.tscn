@@ -11,6 +11,8 @@
 [node name="TileMap" type="TileMap" parent="."]
 mode = 1
 tile_set = ExtResource( 1 )
-cell_size = Vector2( 34, 16 )
+cell_size = Vector2( 32, 16 )
+cell_y_sort = true
+centered_textures = true
 format = 1
 script = ExtResource( 3 )
