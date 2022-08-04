@@ -2,7 +2,7 @@ extends Control
 
 signal build_house
 
-onready var house_button = $HouseButton
+onready var house_button = $VBoxContainer/HouseButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

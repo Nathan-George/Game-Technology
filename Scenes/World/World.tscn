@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/WorldTileSets/Grass/GrassTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/World/WorldInterface.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/World/WorldGen.gd" type="Script" id=3]
 [ext_resource path="res://Assets/WorldTileSets/Water/WaterTileset.tres" type="TileSet" id=4]
+[ext_resource path="res://Scenes/World/WorldElements.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/World Elements/Tree/Tree.tscn" type="PackedScene" id=6]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 2 )
@@ -28,3 +30,7 @@ centered_textures = true
 format = 1
 
 [node name="Buildings" type="Node2D" parent="."]
+
+[node name="WorldElements" type="Node2D" parent="."]
+script = ExtResource( 5 )
+tree = ExtResource( 6 )
