@@ -1,6 +1,6 @@
 extends TileMap
 
-export(int) var map_size = 100
+var map_size = Grid.WORLD_SIZE
 
 var noise_generator : OpenSimplexNoise
 
@@ -23,8 +23,10 @@ func _ready():
 				if value < water_levels[i]:
 					set_cell(x, y, 4 - i)
 					break
+	
+	print(map_to_world(Vector2(0, 0)))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	pass

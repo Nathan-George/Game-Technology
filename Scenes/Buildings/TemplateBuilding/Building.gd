@@ -12,7 +12,6 @@ func _ready():
 
 
 func get_texture() -> Texture:
-	return preload("res://Assets/Buildings/Generic-Building-1.png")
 	return $BuildingSprite.texture
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

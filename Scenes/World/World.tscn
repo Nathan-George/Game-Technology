@@ -18,6 +18,7 @@ script = ExtResource( 2 )
 mode = 1
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 16 )
+cell_custom_transform = Transform2D( 32, 0, 0, 16, 0, 0 )
 cell_y_sort = true
 centered_textures = true
 format = 1
@@ -31,7 +32,7 @@ cell_y_sort = true
 centered_textures = true
 format = 1
 
-[node name="Buildings" type="Node2D" parent="."]
+[node name="Buildings" type="YSort" parent="."]
 
 [node name="WorldElements" type="Node2D" parent="."]
 script = ExtResource( 5 )
