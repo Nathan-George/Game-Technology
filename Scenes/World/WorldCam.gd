@@ -2,16 +2,16 @@ extends Camera2D
 
 
 # Declare member variables here. Examples:
-export(float,0,1) var zoom_rate = 0.9
-var current_zoom = 1;
+export(float,0,1) var zoom_rate = 0.95
+var current_zoom = 0.5
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	zoom = zoom * current_zoom
 	position = Vector2(0, 700)
-	zoom = Vector2(0.3874, 0.3874)
-
-
+	
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
@@ -19,7 +19,7 @@ func _process(delta):
 func _input(event : InputEvent):
 	if event.is_class("InputEventMouseMotion"):
 		if Input.is_mouse_button_pressed(BUTTON_LEFT) or Input.is_mouse_button_pressed(BUTTON_MIDDLE):
-			position-=event.relative*current_zoom
+			position -= event.relative*current_zoom
 			
 	if event.is_class("InputEventMouseButton"):
 		
