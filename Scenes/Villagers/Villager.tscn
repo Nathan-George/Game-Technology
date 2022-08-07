@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Villager/Placeholder Villager.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Villagers/Villager.gd" type="Script" id=2]
+
+[node name="Villager" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="VillagerSprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
