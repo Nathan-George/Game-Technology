@@ -22,7 +22,7 @@ func _process(delta):
 	var tile_index = world_ref.get_tile_index(get_global_mouse_position())
 	
 	# determine the position of that tile
-	var tile_position = world_ref.get_tile_global_position(tile_index)
+	var tile_position = Grid.sprite_get_tile_position(tile_index, sprite.get_texture().get_size())
 	
 	# move to that location
 	position = tile_position
