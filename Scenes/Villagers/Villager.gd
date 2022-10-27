@@ -25,7 +25,7 @@ func _input(event : InputEvent):
 				selected = true
 				
 			elif selected == true:
-				waypoint = get_global_mouse_position()
+				position = get_global_mouse_position()
 				
 		
 		if Input.is_mouse_button_pressed(BUTTON_RIGHT):
